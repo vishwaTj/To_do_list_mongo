@@ -1,0 +1,227 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+
+ /* Styling the main container */
+#main-container{
+    height: 800px;
+    width: 800px;
+    background-color: aliceblue;
+    margin-left: 369px;
+    margin-top: -22px;
+}
+
+#page-heading{
+    color: black;
+}
+
+ /* ******** Styling the input box ********* */
+
+  /* Task Description */
+#Description{
+    margin-left: 12px;
+    color:black;
+    display: block;
+}
+
+#Description label h5{
+    margin: 0px;
+    color: black;
+    margin-left: -710px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+#Description input[type=text]{
+    margin: 0px;
+    color:black;
+    display: block;
+    margin-left: -3px;
+    border: none;
+    height: 30px;
+    width:780px;
+}
+
+  /* category section */
+#category-date{
+    display: flex;
+    flex-direction: row;
+}
+
+#category-section{
+    display:inline-block;
+    width: 50%;
+}
+
+#category-section label h5{
+    display: block;
+    margin-left: -315px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    color:black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+#category-section select{
+    display: block;
+    margin-left: 8px;
+    margin-top: 2px;
+    color: black;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    border: none;
+    size: 20px;
+}
+
+ /* date section */
+#Date-section{
+    display: inline-block;
+    width: 50%;
+}
+
+#Date-section label h5{
+    display: block;
+    margin-left: -250px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+#Date-section input[type=date]{
+    display: block;
+    margin-left: 38px;
+    margin-top: 2px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    border: none;
+    size: 20px;
+}
+
+ /* button to add and delete */
+#Add-button{
+    background-color:chartreuse;
+    width: 90px;
+    height: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: -200px;
+}
+
+#delete-button{
+    background-color: crimson;
+    width: 90px;
+    height: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    position:absolute;
+    left: 750px;
+    top: 156px;
+}
+
+#list{
+    list-style: none;
+}
+
+
+ /* *********** Tasks list sectoin ************ */
+
+  /* task element block  */
+.task-element{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+  left: -18px;
+}
+
+ /* task and the date */
+.task{
+    float: left;
+    width: 50%;
+    margin-left: 0px;
+    display: block;
+}
+
+
+.strikethrough{
+    float: left;
+    margin-top: 3px;
+}
+
+.gap{
+    margin-right: 3px;
+}
+
+
+/* category section */
+.category{
+    position: relative;
+    float:right;
+    margin-right: 50px;
+    width: 66px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    top: 10px;
+}
+
+/*  adjusting the date nd icon */
+.name h7{
+    position: relative;
+    top: 5px;
+    left: -4px;
+}
+
+.name i{
+    position: relative;
+    top: 3px;
+}
+
+
+.category p{
+    position: relative;
+    bottom: 14px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+/* giving colour to each category */
+
+#Work{
+    background-color: #e36014;
+}
+
+#Personal{
+    background-color: #1497e3;
+}
+
+#Gaming{
+    background-color: #71e314;
+}
+
+#School{
+    background-color: rgb(245, 245, 16);
+}
+
+#Other{
+    background-color: fuchsia;
+}
+
+
+ /* adjusting the check box */
+#list input[type=checkbox]{
+    margin-top: 8px;
+}
+
+#list input[type=checkbox]:checked + label.strikethrough {
+    text-decoration: line-through;
+    color: red;
+}
+
+

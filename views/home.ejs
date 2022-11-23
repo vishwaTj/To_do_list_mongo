@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <script src="https://kit.fontawesome.com/3d595ac1c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    
+</head> 
+<body>
+<div id="main-container">
+    <h1 id="page-heading">
+        <i class="fa-solid fa-clipboard"></i>
+        TODO App
+    </h1>
+    <div>
+      <form id="New-item" action="/add-Task" method="post">
+        <div id="Description">
+          <label><h5>Description</h5></label>
+          <input  type="text" id="Task-desc" name="name" placeholder="what do you need to do ?" required>
+        </div>
+        <div id="category-date">
+        <div id="category-section">
+          <label for="Category"><h5>Category:</h5></label>
+          <select name="Category" id="Category" aria-placeholder="Choose Category">
+            <option value1="Personal">Personal</option>
+            <option value1="Work">Work</option>
+            <option value1="School">School</option>
+            <option value1="Gaming">Gaming</option>
+            <option value1="Other">Other</option>
+          </select>
+        </div>
+        <div id="Date-section">
+          <label><h5>Due Date</h5></label>
+          <input  type="date" name="date" placeholder="dd-mm-yy" required>
+        </div> 
+        </div>
+        <button  id="Add-button" type="submit"> + Add Task</button>    
+      </form>
+    </div>
+    <div class="task_container">
+       <form action="/delete" method="post"> 
+       <ul id="list">
+        <% for(i of To_do_List) {%>
+            <li>
+              <div class="task-element">
+                <div class="task">
+                <input type="checkbox" class="strikethrough" name="<%=i._id %>" id="<%=i._id_%>"> 
+                 <label class="strikethrough" for="<%=i._id_%>">
+                  <div class="name" id="date_id"><%= i.name %>
+                     <br> <i class="fa-solid fa-calendar-days strikethrough gap">
+                     &nbsp;</i><h7><%= i.date %></h7></div>
+                  </label>
+                 </input>
+                 </div>
+                <div class="category" id="<%= i.Category%>">
+                 <p class="<%= i.Category%>" for="<%=i._id_%>"><%= i.Category%></p>
+                </div>
+              </div>
+              </li>
+             <% } %>
+       </ul>
+       <button id='delete-button' type="submit" value="Delete Task">Delete</button>
+    </form>
+    </div>
+    <script src="/script/script.js"></script>
+</div>
+</body>
+</html>
